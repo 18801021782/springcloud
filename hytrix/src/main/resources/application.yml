@@ -1,0 +1,28 @@
+server:
+  port: 8060
+  ## 注册到服务中心的名字
+spring:
+  application:
+    name: hystrix
+## 注册中心的默认访问地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+ ## 是否将微服务的Ip注册到服务中心上
+  instance:
+    prefer-ip-address: true
+## 熔断
+feign:
+  hystrix:
+    enabled: true
+## 配置数据监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+
+
+
+
