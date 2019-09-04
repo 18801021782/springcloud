@@ -16,4 +16,6 @@ public class FeignApplication {
         SpringApplication.run(FeignApplication.class,args);
     }
     
+    //冲突位置
+    
 }
